@@ -25,6 +25,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{{route('prodotti_')}}">prodotti</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{route('lavoraconnoi_')}}">lavora con noi</a>
+                    </li>
                 </ul>
                 </div>
             </div>

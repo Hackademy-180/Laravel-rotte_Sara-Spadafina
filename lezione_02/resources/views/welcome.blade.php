@@ -42,6 +42,9 @@ Clonare il progetto di un buddy a vostra scelta e fare in modo che funzioni sul 
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{{route('prodotti_')}}">prodotti</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{route('lavoraconnoi_')}}">lavora con noi</a>
+                    </li>
                 </ul>
                 </div>
             </div>

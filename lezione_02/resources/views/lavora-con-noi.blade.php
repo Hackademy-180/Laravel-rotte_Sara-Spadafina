@@ -1,3 +1,4 @@
+
 <!doctype html>
     <html lang="en">
         <head>
@@ -33,30 +34,8 @@
             </div>
         </nav>
         <header class="container-fluid">
-            <section class="row">
-                <article class="col-12 mt-3 text-center">
-                <h1 class="display-1">I nostri prodotti</h1>
-                </article>
-            </section>
+           
         </header>
-
-        <main class="container">
-            <section class="row ">
-                @foreach($listaProdotti as $prodotto)
-                    <article class=col-12 col-md-4>
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">{{$prodotto["titolo"]}}</h5>
-                                
-                                <a href="{{route("dettaglioprodotto_", ["id"=>$prodotto["id"]])}}" class="card-link">dettaglio</a>
-                            </div>
-                        </div>
-                    </article>
-                @endforeach
-            </section>
-
-        </main>
-
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     </body>

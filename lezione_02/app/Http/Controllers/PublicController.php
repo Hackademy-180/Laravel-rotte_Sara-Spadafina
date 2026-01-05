@@ -47,5 +47,9 @@ class PublicController extends Controller
         if($prodotto["id"]==$id)
         return view("dettaglio-prodotto", ["prodotto"=>$prodotto]);
     }
-}
+    }
+
+    public function Lavoraconnoi(){
+        return view("lavora-con-noi");
+    }
 }

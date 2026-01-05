@@ -11,3 +11,5 @@ route::get("/prodotti", [PublicController::class, "Prodotti"])->name("prodotti_"
 
 // rotta parametrica
 route::get("/dettaglio-prodotto/{id}", [PublicController::class, "Dettaglioprodotto"])->name("dettaglioprodotto_");
+
+route::get("/lavora-con-noi", [PublicController::class, "Lavoraconnoi"])->name("lavoraconnoi_");

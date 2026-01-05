@@ -17,10 +17,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{{route('homepage_')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/chi siamo">chi siamo</a>
+                        <a class="nav-link active" aria-current="page" href="{{route('chisiamo_')}}">chi siamo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{route('prodotti_')}}">prodotti</a>
                     </li>
                 </ul>
                 </div>
@@ -35,13 +38,11 @@
         </header>
         <main class="container">
             <section class="row">
-                @foreach($names as $nomi)
+                @foreach($names as $nome)
                     <article class=col-12 col-md-4>
                         <div class="card">
                             <div class="card-body">
-                                
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-
+                                <p class="lead">{{$nome}}</p>
                             </div>
                         </div>
                     </article>

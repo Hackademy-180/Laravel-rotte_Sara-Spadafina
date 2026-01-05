@@ -1,20 +1,3 @@
-<!-- Traccia 1:
-Replicare il progetto visto a lezione con tanto di pagina dei prodotti e pagina di dettaglio
-
-Traccia 2:
-Realizzare un nuovo progetto in Laravel. Questa pagina dovrà avere una vista dedicata a dei libri. 
-Ciascun libro dovrà avere i seguenti parametri:
-    Titolo
-    Autore
-    Genere
-    Descrizione
-Creare una pagina in cui sia possibile visualizzare una card per ogni libro che 
-mostri soltanto il titolo. Queste card dovranno avere anche un link che permetta
-di accedere alla pagina di dettaglio del singolo libro che mostrerà tutti i dati.
-Utilizzare il PublicController per gestire la logica.
-
-Traccia 3:
-Clonare il progetto di un buddy a vostra scelta e fare in modo che funzioni sul vostro PC  -->
 <!doctype html>
     <html lang="en">
         <head>
@@ -47,12 +30,30 @@ Clonare il progetto di un buddy a vostra scelta e fare in modo che funzioni sul 
             </div>
         </nav>
         <header class="container-fluid">
-            <section class="row header align-items-center vh-100">
-                <article class="col-12 text-white text-center">
-                <h1 class="display-1">Hello, world!</h1>
+            <section class="row">
+                <article class="col-12 mt-3 text-center">
+                <h1 class="display-1">I nostri prodotti</h1>
                 </article>
             </section>
         </header>
+
+        <main class="container">
+            <section class="row ">
+                @foreach($listaProdotti as $prodotto)
+                    <article class=col-12 col-md-4>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{$prodotto["titolo"]}}</h5>
+                                
+                                <a href="{{route("dettaglioprodotto_", ["id"=>$prodotto["id"]])}}" class="card-link">dettaglio</a>
+                            </div>
+                        </div>
+                    </article>
+                @endforeach
+            </section>
+
+        </main>
+
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     </body>
